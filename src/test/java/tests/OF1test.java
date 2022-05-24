@@ -34,5 +34,11 @@ public class OF1test extends BaseTest {
 
         Assert.assertEquals(error_text, "Такого пользователя не существует.");
 
+        getDriver().findElement(By.xpath("//img[@src='/static/images/logo.png']")).click();
+
+        getDriver().findElement(By.linkText("Какие предметы, контент и системы пропадут с выходом Wrath of the Lich King Classic")).click();
+
+
+
     }
 }
