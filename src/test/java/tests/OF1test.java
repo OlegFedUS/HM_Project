@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import runner.BaseTest;
 
 import java.time.Duration;
+import java.util.List;
 
 public class OF1test extends BaseTest {
 
@@ -37,6 +38,14 @@ public class OF1test extends BaseTest {
         getDriver().findElement(By.xpath("//img[@src='/static/images/logo.png']")).click();
 
         getDriver().findElement(By.linkText("Какие предметы, контент и системы пропадут с выходом Wrath of the Lich King Classic")).click();
+
+        List<WebElement> text = getDriver().findElements(By.xpath("//div[@class='inner']"));
+
+
+        for (int i = 0; i < text.size(); i++){
+            System.out.println(text.get(i));
+            Assert.assertTrue(text.get(i).getText().toLowerCase().contains("wrath of the lich king"));
+        }
 
 
 
