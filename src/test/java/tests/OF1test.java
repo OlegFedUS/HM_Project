@@ -38,6 +38,7 @@ public class OF1test extends BaseTest {
 
         getDriver().findElement(By.linkText("Какие предметы, контент и системы пропадут с выходом Wrath of the Lich King Classic")).click();
 
+        //Текст для проверки.
 
 
     }
